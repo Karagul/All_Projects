@@ -267,9 +267,11 @@ total_age_ranges = grouped_purchasing["Age Summary"].value_counts()
 average_age= round(total_age_ranges/total_age_ranges.sum() * 100,2)
 age_demogra_df = pd.DataFrame({"Total Count":total_age_ranges,"Percentage of Players":average_age})
 #age_demogra.sort_values(by=['Percentage of Players','Total Count'],ascending=False)
-age_demogra_df = pd.DataFrame(age_demogra_df)
-age_demogra_df.index = ["<10", "10-14", "15-19", "20-24", "25-29", "30-34", "35-39", "40+"]
-age_demogra_df
+#Sorting data
+#age_demogra_df.reset_index()
+#age_demogra_df.sort_values(by=['index'])
+age_demogra_df.sort_values(by='Percentage of Players')
+
 ```
 
 
@@ -299,44 +301,44 @@ age_demogra_df
   </thead>
   <tbody>
     <tr>
+      <th>40+</th>
+      <td>1.92</td>
+      <td>11</td>
+    </tr>
+    <tr>
       <th>&lt;10</th>
-      <td>45.20</td>
-      <td>259</td>
+      <td>3.32</td>
+      <td>19</td>
     </tr>
     <tr>
       <th>10-14</th>
-      <td>17.45</td>
-      <td>100</td>
-    </tr>
-    <tr>
-      <th>15-19</th>
-      <td>15.18</td>
-      <td>87</td>
-    </tr>
-    <tr>
-      <th>20-24</th>
-      <td>8.20</td>
-      <td>47</td>
-    </tr>
-    <tr>
-      <th>25-29</th>
-      <td>4.71</td>
-      <td>27</td>
-    </tr>
-    <tr>
-      <th>30-34</th>
       <td>4.01</td>
       <td>23</td>
     </tr>
     <tr>
       <th>35-39</th>
-      <td>3.32</td>
-      <td>19</td>
+      <td>4.71</td>
+      <td>27</td>
     </tr>
     <tr>
-      <th>40+</th>
-      <td>1.92</td>
-      <td>11</td>
+      <th>30-34</th>
+      <td>8.20</td>
+      <td>47</td>
+    </tr>
+    <tr>
+      <th>25-29</th>
+      <td>15.18</td>
+      <td>87</td>
+    </tr>
+    <tr>
+      <th>15-19</th>
+      <td>17.45</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <th>20-24</th>
+      <td>45.20</td>
+      <td>259</td>
     </tr>
   </tbody>
 </table>
@@ -360,10 +362,7 @@ purchase_age_df["Average Purchase Price"] = purchase_age_df["Average Purchase Pr
 purchase_age_df["Normalized Totals"] = purchase_age_df["Normalized Totals"].map("${:.2f}".format)
 purchase_age_df["Total Purchase Price"] = purchase_age_df["Total Purchase Price"].map("${:.2f}".format)
 #Set index for sorting 
-purchase_age_df = pd.DataFrame(purchase_age_df)
-purchase_age_df.index = ["<10", "10-14", "15-19", "20-24", "25-29", "30-34", "35-39", "40+"]
-purchase_age_df
-
+purchase_age_df.sort_values(by='Purchase Count')
 ```
 
 
@@ -395,60 +394,60 @@ purchase_age_df
   </thead>
   <tbody>
     <tr>
-      <th>&lt;10</th>
-      <td>35</td>
-      <td>$2.77</td>
-      <td>$96.95</td>
-      <td>$4.22</td>
-    </tr>
-    <tr>
-      <th>10-14</th>
-      <td>133</td>
-      <td>$2.91</td>
-      <td>$386.42</td>
-      <td>$3.86</td>
-    </tr>
-    <tr>
-      <th>15-19</th>
-      <td>336</td>
-      <td>$2.91</td>
-      <td>$978.77</td>
-      <td>$3.78</td>
-    </tr>
-    <tr>
-      <th>20-24</th>
-      <td>125</td>
-      <td>$2.96</td>
-      <td>$370.33</td>
-      <td>$4.26</td>
-    </tr>
-    <tr>
-      <th>25-29</th>
-      <td>64</td>
-      <td>$3.08</td>
-      <td>$197.25</td>
-      <td>$4.20</td>
-    </tr>
-    <tr>
-      <th>30-34</th>
-      <td>42</td>
-      <td>$2.84</td>
-      <td>$119.40</td>
-      <td>$4.42</td>
-    </tr>
-    <tr>
-      <th>35-39</th>
+      <th>40+</th>
       <td>17</td>
       <td>$3.16</td>
       <td>$53.75</td>
       <td>$4.89</td>
     </tr>
     <tr>
-      <th>40+</th>
+      <th>&lt;10</th>
       <td>28</td>
       <td>$2.98</td>
       <td>$83.46</td>
       <td>$4.39</td>
+    </tr>
+    <tr>
+      <th>10-14</th>
+      <td>35</td>
+      <td>$2.77</td>
+      <td>$96.95</td>
+      <td>$4.22</td>
+    </tr>
+    <tr>
+      <th>35-39</th>
+      <td>42</td>
+      <td>$2.84</td>
+      <td>$119.40</td>
+      <td>$4.42</td>
+    </tr>
+    <tr>
+      <th>30-34</th>
+      <td>64</td>
+      <td>$3.08</td>
+      <td>$197.25</td>
+      <td>$4.20</td>
+    </tr>
+    <tr>
+      <th>25-29</th>
+      <td>125</td>
+      <td>$2.96</td>
+      <td>$370.33</td>
+      <td>$4.26</td>
+    </tr>
+    <tr>
+      <th>15-19</th>
+      <td>133</td>
+      <td>$2.91</td>
+      <td>$386.42</td>
+      <td>$3.86</td>
+    </tr>
+    <tr>
+      <th>20-24</th>
+      <td>336</td>
+      <td>$2.91</td>
+      <td>$978.77</td>
+      <td>$3.78</td>
     </tr>
   </tbody>
 </table>
@@ -468,18 +467,12 @@ average_purchase_spender = grouped_purchasing_spender['Price'].mean()
 spender_df = pd.DataFrame({"Purchase Count":purchase_count_spender,"Average Purchase Price":round(average_purchase_spender,2), "Total Purchase Value":total_each_spender},
                      columns=["Purchase Count","Average Purchase Price","Total Purchase Value"])
 
-
 spender_df_temp = spender_df.nlargest(5,'Total Purchase Value')
 
 spender_df_temp["Total Purchase Value"] =spender_df_temp["Total Purchase Value"].map("${:.2f}".format)
 spender_df_temp["Average Purchase Price"] = spender_df_temp["Average Purchase Price"].map("${:.2f}".format)
 
 spender_df_temp
-
-
-
-
-
 ```
 
 
