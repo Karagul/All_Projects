@@ -31,10 +31,8 @@ total_ride
 #Create new dataframe with 2 new data
 ride_data_cal = pd.DataFrame({ "average fare":average_ride_fare,"total ride": total_ride})
 ride_data_cal.reset_index('city',inplace=True)
-#Find duplicate  on City_data and sum it up
-city_data_cal = city_data.groupby(['city','type']).sum().reset_index()
 #Merge new dataframe with city_data to correspond the cities with its types(Urban, Suburban, Rural)
-consol_data = pd.merge(ride_data_cal,city_data_cal,on="city",how='left')
+consol_data = pd.merge(ride_data_cal,city_data,how="left", on=["city", "city"])
 ```
 
 # Bubble Plot of Ride Sharing Data
@@ -125,8 +123,8 @@ plt.show()
 
 
 ```python
-#Reuse city_data calculate above(after sum duplicate), merge with ride data to calculate total fare.
-merge_data = pd.merge(ride_data,city_data_cal, on = 'city')
+#Reuse city_data calculate, merge with ride data to calculate total fare.
+merge_data = pd.merge(ride_data,city_data, how="left", on=["city", "city"])
 #all Charts below relate to City Type so will use this dataframe 'total_type'
 total_type = merge_data.groupby('type')
 chart_fare = total_type['fare'].sum().reset_index()
@@ -138,11 +136,181 @@ plt.figure(figsize=(12,10))
 plt.pie(chart_fare['fare'],explode=explode,labels=chart_fare['type'],colors=colors,autopct="%1.1f%%", shadow=True, startangle=160)
 plt.savefig("Images/totalfarescity.png")
 plt.show()
-
 ```
 
 
 ![png](output_7_0.png)
+
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>city</th>
+      <th>date</th>
+      <th>fare</th>
+      <th>ride_id</th>
+      <th>driver_count</th>
+      <th>type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Sarabury</td>
+      <td>2016-01-16 13:49:27</td>
+      <td>38.35</td>
+      <td>5403689035038</td>
+      <td>46</td>
+      <td>Urban</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>South Roy</td>
+      <td>2016-01-02 18:42:34</td>
+      <td>17.49</td>
+      <td>4036272335942</td>
+      <td>35</td>
+      <td>Urban</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Wiseborough</td>
+      <td>2016-01-21 17:35:29</td>
+      <td>44.18</td>
+      <td>3645042422587</td>
+      <td>55</td>
+      <td>Urban</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Spencertown</td>
+      <td>2016-07-31 14:53:22</td>
+      <td>6.87</td>
+      <td>2242596575892</td>
+      <td>68</td>
+      <td>Urban</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Nguyenbury</td>
+      <td>2016-07-09 04:42:44</td>
+      <td>6.28</td>
+      <td>1543057793673</td>
+      <td>8</td>
+      <td>Urban</td>
+    </tr>
+    <tr>
+      <th>1625</th>
+      <td>Port James</td>
+      <td>2016-12-04 06:16:36</td>
+      <td>15.77</td>
+      <td>2259499336994</td>
+      <td>15</td>
+      <td>Suburban</td>
+    </tr>
+    <tr>
+      <th>1626</th>
+      <td>Port James</td>
+      <td>2016-12-04 06:16:36</td>
+      <td>15.77</td>
+      <td>2259499336994</td>
+      <td>3</td>
+      <td>Suburban</td>
+    </tr>
+    <tr>
+      <th>1627</th>
+      <td>New Samanthaside</td>
+      <td>2016-06-05 14:36:58</td>
+      <td>39.38</td>
+      <td>3647873452658</td>
+      <td>16</td>
+      <td>Suburban</td>
+    </tr>
+    <tr>
+      <th>1628</th>
+      <td>Port Alexandria</td>
+      <td>2016-07-29 09:30:09</td>
+      <td>24.86</td>
+      <td>2962960319234</td>
+      <td>27</td>
+      <td>Suburban</td>
+    </tr>
+    <tr>
+      <th>1629</th>
+      <td>Lake Brenda</td>
+      <td>2016-08-26 03:07:30</td>
+      <td>20.97</td>
+      <td>5231983896020</td>
+      <td>24</td>
+      <td>Suburban</td>
+    </tr>
+    <tr>
+      <th>2282</th>
+      <td>Horneland</td>
+      <td>2016-07-19 10:07:33</td>
+      <td>12.63</td>
+      <td>8214498891817</td>
+      <td>8</td>
+      <td>Rural</td>
+    </tr>
+    <tr>
+      <th>2283</th>
+      <td>Kinghaven</td>
+      <td>2016-05-18 23:28:12</td>
+      <td>20.53</td>
+      <td>6432117120069</td>
+      <td>3</td>
+      <td>Rural</td>
+    </tr>
+    <tr>
+      <th>2284</th>
+      <td>New Johnbury</td>
+      <td>2016-04-21 08:30:25</td>
+      <td>56.60</td>
+      <td>9002881309143</td>
+      <td>6</td>
+      <td>Rural</td>
+    </tr>
+    <tr>
+      <th>2285</th>
+      <td>South Joseph</td>
+      <td>2016-02-17 01:41:29</td>
+      <td>57.52</td>
+      <td>7365786843443</td>
+      <td>3</td>
+      <td>Rural</td>
+    </tr>
+    <tr>
+      <th>2286</th>
+      <td>Kennethburgh</td>
+      <td>2016-10-19 13:13:17</td>
+      <td>24.43</td>
+      <td>2728236352387</td>
+      <td>3</td>
+      <td>Rural</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
 
 
 # Total Rides by City Type
