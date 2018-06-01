@@ -78,7 +78,7 @@ plt.scatter(rural_data['total ride'], rural_data['average fare'], s=rural_data['
 plt.xlim(min(consol_data['total ride'])-5, max(consol_data['total ride'])+5)
 plt.ylim(min(consol_data['average fare'])-5, max(consol_data['average fare'])+5)
 plt.suptitle("Pyber Ride Share Data(2016)", fontsize = 16, fontweight="bold")
-plt.text('Note:\nCircle size correlates with driver count per city',x=1.4,y=0.5)
+plt.text(40,30,'Note:\nCircle size correlates with driver count per city')
 plt.xlabel('Total Nmber of Ride (per City)')
 plt.ylabel('Average Fare($)')
 #Set legend title and size of points
@@ -96,23 +96,7 @@ plt.show()
 ```
 
 
-    ---------------------------------------------------------------------------
-
-    TypeError                                 Traceback (most recent call last)
-
-    <ipython-input-29-79cc329031b3> in <module>()
-         38 plt.ylim(min(consol_data['average fare'])-5, max(consol_data['average fare'])+5)
-         39 plt.suptitle("Pyber Ride Share Data(2016)", fontsize = 16, fontweight="bold")
-    ---> 40 plt.text('Note:\nCircle size correlates with driver count per city',x=1.4,y=0.5)
-         41 plt.xlabel('Total Nmber of Ride (per City)')
-         42 plt.ylabel('Average Fare($)')
-    
-
-    TypeError: text() got multiple values for argument 'x'
-
-
-
-![png](output_4_1.png)
+![png](output_4_0.png)
 
 
 
@@ -188,11 +172,4 @@ plt.show()
 
 
 ![png](output_11_0.png)
-
-
-
-
-
-    125
-
 
