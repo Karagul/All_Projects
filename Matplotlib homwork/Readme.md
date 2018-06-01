@@ -78,7 +78,7 @@ plt.scatter(rural_data['total ride'], rural_data['average fare'], s=rural_data['
 plt.xlim(min(consol_data['total ride'])-5, max(consol_data['total ride'])+5)
 plt.ylim(min(consol_data['average fare'])-5, max(consol_data['average fare'])+5)
 plt.suptitle("Pyber Ride Share Data(2016)", fontsize = 16, fontweight="bold")
-plt.title('Note:\nCircle size correlates with driver count per city',x=1.4,y=0.5)
+plt.text('Note:\nCircle size correlates with driver count per city',x=1.4,y=0.5)
 plt.xlabel('Total Nmber of Ride (per City)')
 plt.ylabel('Average Fare($)')
 #Set legend title and size of points
@@ -96,7 +96,23 @@ plt.show()
 ```
 
 
-![png](output_4_0.png)
+    ---------------------------------------------------------------------------
+
+    TypeError                                 Traceback (most recent call last)
+
+    <ipython-input-29-79cc329031b3> in <module>()
+         38 plt.ylim(min(consol_data['average fare'])-5, max(consol_data['average fare'])+5)
+         39 plt.suptitle("Pyber Ride Share Data(2016)", fontsize = 16, fontweight="bold")
+    ---> 40 plt.text('Note:\nCircle size correlates with driver count per city',x=1.4,y=0.5)
+         41 plt.xlabel('Total Nmber of Ride (per City)')
+         42 plt.ylabel('Average Fare($)')
+    
+
+    TypeError: text() got multiple values for argument 'x'
+
+
+
+![png](output_4_1.png)
 
 
 
@@ -142,177 +158,6 @@ plt.show()
 ![png](output_7_0.png)
 
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>city</th>
-      <th>date</th>
-      <th>fare</th>
-      <th>ride_id</th>
-      <th>driver_count</th>
-      <th>type</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Sarabury</td>
-      <td>2016-01-16 13:49:27</td>
-      <td>38.35</td>
-      <td>5403689035038</td>
-      <td>46</td>
-      <td>Urban</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>South Roy</td>
-      <td>2016-01-02 18:42:34</td>
-      <td>17.49</td>
-      <td>4036272335942</td>
-      <td>35</td>
-      <td>Urban</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Wiseborough</td>
-      <td>2016-01-21 17:35:29</td>
-      <td>44.18</td>
-      <td>3645042422587</td>
-      <td>55</td>
-      <td>Urban</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Spencertown</td>
-      <td>2016-07-31 14:53:22</td>
-      <td>6.87</td>
-      <td>2242596575892</td>
-      <td>68</td>
-      <td>Urban</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Nguyenbury</td>
-      <td>2016-07-09 04:42:44</td>
-      <td>6.28</td>
-      <td>1543057793673</td>
-      <td>8</td>
-      <td>Urban</td>
-    </tr>
-    <tr>
-      <th>1625</th>
-      <td>Port James</td>
-      <td>2016-12-04 06:16:36</td>
-      <td>15.77</td>
-      <td>2259499336994</td>
-      <td>15</td>
-      <td>Suburban</td>
-    </tr>
-    <tr>
-      <th>1626</th>
-      <td>Port James</td>
-      <td>2016-12-04 06:16:36</td>
-      <td>15.77</td>
-      <td>2259499336994</td>
-      <td>3</td>
-      <td>Suburban</td>
-    </tr>
-    <tr>
-      <th>1627</th>
-      <td>New Samanthaside</td>
-      <td>2016-06-05 14:36:58</td>
-      <td>39.38</td>
-      <td>3647873452658</td>
-      <td>16</td>
-      <td>Suburban</td>
-    </tr>
-    <tr>
-      <th>1628</th>
-      <td>Port Alexandria</td>
-      <td>2016-07-29 09:30:09</td>
-      <td>24.86</td>
-      <td>2962960319234</td>
-      <td>27</td>
-      <td>Suburban</td>
-    </tr>
-    <tr>
-      <th>1629</th>
-      <td>Lake Brenda</td>
-      <td>2016-08-26 03:07:30</td>
-      <td>20.97</td>
-      <td>5231983896020</td>
-      <td>24</td>
-      <td>Suburban</td>
-    </tr>
-    <tr>
-      <th>2282</th>
-      <td>Horneland</td>
-      <td>2016-07-19 10:07:33</td>
-      <td>12.63</td>
-      <td>8214498891817</td>
-      <td>8</td>
-      <td>Rural</td>
-    </tr>
-    <tr>
-      <th>2283</th>
-      <td>Kinghaven</td>
-      <td>2016-05-18 23:28:12</td>
-      <td>20.53</td>
-      <td>6432117120069</td>
-      <td>3</td>
-      <td>Rural</td>
-    </tr>
-    <tr>
-      <th>2284</th>
-      <td>New Johnbury</td>
-      <td>2016-04-21 08:30:25</td>
-      <td>56.60</td>
-      <td>9002881309143</td>
-      <td>6</td>
-      <td>Rural</td>
-    </tr>
-    <tr>
-      <th>2285</th>
-      <td>South Joseph</td>
-      <td>2016-02-17 01:41:29</td>
-      <td>57.52</td>
-      <td>7365786843443</td>
-      <td>3</td>
-      <td>Rural</td>
-    </tr>
-    <tr>
-      <th>2286</th>
-      <td>Kennethburgh</td>
-      <td>2016-10-19 13:13:17</td>
-      <td>24.43</td>
-      <td>2728236352387</td>
-      <td>3</td>
-      <td>Rural</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
 # Total Rides by City Type
 
 
@@ -333,8 +178,9 @@ plt.show()
 
 
 ```python
+city_data.drop_duplicates(subset=['city'],inplace=True)
 plt.figure(figsize=(12,10))
-chart_driver = total_type['driver_count'].sum().reset_index()
+chart_driver = city_data.groupby("type")['driver_count'].sum().reset_index()
 plt.pie(chart_driver['driver_count'],explode=explode,labels=chart_driver['type'],colors=colors,autopct="%1.1f%%", shadow=True, startangle=160)
 plt.savefig("Images/totaldriverscity.png")
 plt.show()
@@ -342,4 +188,11 @@ plt.show()
 
 
 ![png](output_11_0.png)
+
+
+
+
+
+    125
+
 
