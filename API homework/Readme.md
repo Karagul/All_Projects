@@ -60,7 +60,7 @@ cities_df = pd.DataFrame({"Lat":lat,"Lon":lon,"City Name":name,"Country Code":co
 #Drop duplicate Cities by using City Name
 cities_df.drop_duplicates(subset=['City Name'],inplace=True)
 cities_df.to_csv("cities.csv", index = False)
-len(df)
+len(cities_df)
 ```
 
 
