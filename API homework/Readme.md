@@ -1747,7 +1747,7 @@ plt.show()
 ```
 
 
-![png](output_7_0.png)
+![png](output_7_01.png)
 
 
 # Humidity (%) vs. Latitude
@@ -1764,7 +1764,7 @@ plt.show()
 ```
 
 
-![png](output_9_0.png)
+![png](output_9_02.png)
 
 
 # Cloudiness (%) vs. Latitude
@@ -1781,7 +1781,7 @@ plt.show()
 ```
 
 
-![png](output_11_0.png)
+![png](output_11_03.png)
 
 
 # Wind Speed (mph) vs. Latitude
@@ -1798,5 +1798,5 @@ plt.show()
 ```
 
 
-![png](output_13_0.png)
+![png](output_13_04.png)
 
