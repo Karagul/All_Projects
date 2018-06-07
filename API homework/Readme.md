@@ -89,7 +89,7 @@ query_url =  f"{url}appid={api_key}&units={units}&q="
 i=0
 print("Beginning Data Retrieval")
 print("------------------------")
-while i <= len(df):
+while i <= len(cities_df):
     try:
         response = requests.get(query_url + cities_df['City Name'][i]).json()
         response["main"]["temp"] #checking if wrong City Name, will only show KeyError once we look for a index,example 'main' index
