@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wind Speed</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="defineX.css">
+</head>
+<body>
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                      <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html">Latitude</a>
+                    </div>
+                      <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="Maxtemp.html">Max Temperature</a></li>
+                                    <li><a href="Humidity.html">Humidity</a></li>
+                                    <li><a href="Cloudiness.html">Cloudiness</a></li>
+                                    <li><a href="Windspeed.html">Wind Speed</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="comparison.html">Comparison</a></li>
+                            <li><a href="data.html">Data</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-7 box">
+                <div class="modal-header">
+                        <h1>Wind Speed</h1> <br>
+                </div>
+                    <div >
+                        <img src="Resources/assets/images/Fig4.png" alt="Windspeed" width="560" height="440">
+                    </div>
+                <br>
+                    <p> 
+                            As expected, the weather becomes significantly warmer as on approaches
+                            the equator (0 Deg. Latitude). More interestingly, however, is the fact
+                            that the southern hemisphere tends to be warmer this time of year than 
+                            the northern hemisphere.This may be due to the tit of the earth at the time
+                            of the year this data was gathered. </p>
+                </div>
+    
+            <div class="col-md-5 box">
+                    <div class="modal-header">
+                            <h1>Visualizations</h1>
+                        </div>
+                        <br>
+                    <a href="Maxtemp.html"><img src="Resources/assets/images/Fig1.png" alt="Max Temperature" width="200" height="180"></a>
+                    <a href="Humidity.html"><img src="Resources/assets/images/Fig2.png" alt="Humidity" width="200" height="180"></a>
+                    <a href="Cloudiness.html"><img src="Resources/assets/images/Fig3.png" alt="Cloudiness" width="200" height="180"></a>
+                    <a href="Windspeed.html"><img style='border:1px solid green' src="Resources/assets/images/Fig4.png" alt="Windspeed" width="200" height="180"></a>
+            </div>  
+        </div>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</html>
