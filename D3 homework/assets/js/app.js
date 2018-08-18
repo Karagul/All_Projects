@@ -15,8 +15,8 @@ d3.csv("./assets/data/data.csv", function(error, djData) {
     });
 
 function autochange(datasource,key1,key2,y,x) {
-var svgHeight = 500;
-var svgWidth = 700;
+var svgHeight = 550;
+var svgWidth = 900;
 
 var margin = {
     top: 20,
