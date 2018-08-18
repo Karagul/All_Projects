@@ -93,6 +93,7 @@ var toolTip = d3.select("body").append("div")
 var check = g.selectAll("circle,text");
 
 check.on("mouseover", function(d, i) {
+     //Condition to change text on tooltip with median will appear value and % will add in %
 if (key1==="income" || key1 === "age") {
   toolTip
   .html(`${d.state}<br>${key1.charAt(0).toUpperCase() + key1.substr(1)}: ${d[key1]}<br>${key2.charAt(0).toUpperCase() + key2.substr(1)}: ${d[key2]}%`)
@@ -117,7 +118,7 @@ if (key1==="income" || key1 === "age") {
 })
 
  
-  // Create axes labels for X
+  // Create axes labels for Y
   var axisY1 = chartGroup.append("text")
     .attr("transform", "rotate(-90)")
     .attr("y", 0 - margin.left + 88)
@@ -145,7 +146,7 @@ if (key1==="income" || key1 === "age") {
     .attr("value","obesity")
     .text("Obese (%)");
     
-    // Conditions if choose this label on X then will generate new data and  other labels will act as CSS define file
+    // Conditions if choose this label on Y axis then will generate new data and  other labels will act as CSS define file
     if (key2==="healthcare") {
       axisY1.classed("active",true);
       axisY1.classed("inactive",false);
@@ -164,7 +165,7 @@ if (key1==="income" || key1 === "age") {
       axisY3.classed("active",true);
       axisY3.classed("inactive",false);
     }
-   // Create axes labels for Y
+   // Create axes labels for X
   var axisX1 = chartGroup.append("text")
     .attr("transform", `translate(${width/2.2}, ${height + margin.top + 30})`)
     .attr("class", "axisX")
