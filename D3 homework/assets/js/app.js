@@ -15,8 +15,8 @@ d3.csv("./assets/data/data.csv", function(error, djData) {
     });
 
 function autochange(datasource,key1,key2,y,x) {
-var svgHeight = 500;
-var svgWidth = 700;
+var svgHeight = 550;
+var svgWidth = 900;
 
 var margin = {
     top: 20,
@@ -93,11 +93,23 @@ var toolTip = d3.select("body").append("div")
 var check = g.selectAll("circle,text");
 
 check.on("mouseover", function(d, i) {
-toolTip
+     //Condition to change text on tooltip with median will appear value and % will add in %
+if (key1==="income" || key1 === "age") {
+  toolTip
+  .html(`${d.state}<br>${key1.charAt(0).toUpperCase() + key1.substr(1)}: ${d[key1]}<br>${key2.charAt(0).toUpperCase() + key2.substr(1)}: ${d[key2]}%`)
+  .style('left', d3.event.pageX + 10 + 'px')
+  .style('top', d3.event.pageY + 'px')
+  .style('display', 'block')
+
+ }
+
+ else {
+  toolTip
   .html(`${d.state}<br>${key1.charAt(0).toUpperCase() + key1.substr(1)}: ${d[key1]}%<br>${key2.charAt(0).toUpperCase() + key2.substr(1)}: ${d[key2]}%`)
   .style('left', d3.event.pageX + 10 + 'px')
   .style('top', d3.event.pageY + 'px')
   .style('display', 'block')
+ }
 
 })
 // Add an onmouseout event to make the tooltip invisible
@@ -106,7 +118,7 @@ toolTip
 })
 
  
-  // Create axes labels for X
+  // Create axes labels for Y
   var axisY1 = chartGroup.append("text")
     .attr("transform", "rotate(-90)")
     .attr("y", 0 - margin.left + 88)
@@ -134,7 +146,7 @@ toolTip
     .attr("value","obesity")
     .text("Obese (%)");
     
-    // Conditions if choose this label on X then will generate new data and  other labels will act as CSS define file
+    // Conditions if choose this label on Y axis then will generate new data and  other labels will act as CSS define file
     if (key2==="healthcare") {
       axisY1.classed("active",true);
       axisY1.classed("inactive",false);
@@ -153,7 +165,7 @@ toolTip
       axisY3.classed("active",true);
       axisY3.classed("inactive",false);
     }
-   // Create axes labels for Y
+   // Create axes labels for X
   var axisX1 = chartGroup.append("text")
     .attr("transform", `translate(${width/2.2}, ${height + margin.top + 30})`)
     .attr("class", "axisX")
