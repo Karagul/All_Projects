@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://www.digilib.com/dtd/properties.dtd">
+<properties>
+<category name="db-driver">
+	<property name="driver">oracle.jdbc.driver.OracleDriver</property>
+</category>
+<category name="db-connection">
+	<property name="uri">jdbc:oracle:thin:@www.digilib.com:1521:library</property>
+	<property name="username">librarian</property>
+	<property name="password">librarian</property>
+</category>
+</properties>

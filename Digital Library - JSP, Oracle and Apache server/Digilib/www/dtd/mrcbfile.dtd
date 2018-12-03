@@ -1,0 +1,114 @@
+﻿<!ELEMENT mrcbfile (mrcb+)>
+<!ELEMENT mrcb (mrcb-numbers-and-codes? , mrcb-main-entry? , mrcb-title-and-title-related? , mrcb-edition-imprint-etc? , mrcb-physical-description?, mrcb-notes? , mrcb-location?)>
+<!ATTLIST mrcb format-type  CDATA  #REQUIRED>
+<!ELEMENT mrcb-control-fields (mrcb010?, mrcb024*)>
+<!ELEMENT mrcb010 (mrcb010-a*)>
+<!ATTLIST mrcb010 name       CDATA  #FIXED "LIBRARY OF CONGRESS CONTROL NUMBER">
+<!ATTLIST mrcb010 obsolete   CDATA  #FIXED "no">
+<!ATTLIST mrcb010 repeatable CDATA  #FIXED "no">
+<!ATTLIST mrcb010 i1          (i1-blank )  "i1-blank">
+<!ATTLIST mrcb010 i2          (i2-blank )  "i2-blank">
+<!ELEMENT mrcb010-a (#PCDATA)>
+<!ATTLIST mrcb010-a name       CDATA  #FIXED "LC control number">
+<!ATTLIST mrcb010-a obsolete   CDATA  #FIXED "no">
+<!ATTLIST mrcb010-a repeatable CDATA  #FIXED "no">
+<!ELEMENT mrcb024 (mrcb024-a)*>
+<!ATTLIST mrcb024 name       CDATA  #FIXED "OTHER STANDARD IDENTIFIER">
+<!ATTLIST mrcb024 obsolete   CDATA  #FIXED "no">
+<!ATTLIST mrcb024 repeatable CDATA  #FIXED "yes">
+<!ELEMENT mrcb024-a (#PCDATA)>
+<!ATTLIST mrcb024-a name       CDATA  #FIXED "Standard recording code">
+<!ATTLIST mrcb024-a obsolete   CDATA  #FIXED "no">
+<!ATTLIST mrcb024-a repeatable CDATA  #FIXED "no">
+<!ELEMENT mrcb041 (mrcb041-a*)>
+<!ATTLIST mrcb041 name       CDATA  #FIXED "LANGUAGE CODE">
+<!ATTLIST mrcb041 obsolete   CDATA  #FIXED "no">
+<!ATTLIST mrcb041 repeatable CDATA  #FIXED "no">
+<!ELEMENT mrcb041-a (#PCDATA)>
+<!ATTLIST mrcb041-a name       CDATA  #FIXED "Language code of text/sound track or separate title">
+<!ATTLIST mrcb041-a obsolete   CDATA  #FIXED "no">
+<!ATTLIST mrcb041-a repeatable CDATA  #FIXED "no">
+<!ELEMENT mrcb-main-entry (mrcb100?, mrcb130?)>
+<!ELEMENT mrcb100 (mrcb100-a*)>
+<!ATTLIST mrcb100 name       CDATA  #FIXED "MAIN ENTRY--PERSONAL NAME">
+<!ATTLIST mrcb100 obsolete   CDATA  #FIXED "no">
+<!ATTLIST mrcb100 repeatable CDATA  #FIXED "no">
+<!ELEMENT mrcb100-a (#PCDATA)>
+<!ATTLIST mrcb100-a name       CDATA  #FIXED "Personal name">
+<!ATTLIST mrcb100-a obsolete   CDATA  #FIXED "no">
+<!ATTLIST mrcb100-a repeatable CDATA  #FIXED "no">
+<!ELEMENT mrcb130 (mrcb130-a*)>
+<!ATTLIST mrcb130 name       CDATA  #FIXED "MAIN ENTRY--UNIFORM TITLE">
+<!ATTLIST mrcb130 obsolete   CDATA  #FIXED "no">
+<!ATTLIST mrcb130 repeatable CDATA  #FIXED "no">
+<!ATTLIST mrcb130-a name       CDATA  #FIXED "Uniform title">
+<!ATTLIST mrcb130-a obsolete   CDATA  #FIXED "no">
+<!ATTLIST mrcb130-a repeatable CDATA  #FIXED "no">
+<!ELEMENT mrcb-title-and-title-related (mrcb245?, mrcb246*)>
+<!ELEMENT mrcb245 (mrcb245-a*)>
+<!ATTLIST mrcb245 name       CDATA  #FIXED "TITLE STATEMENT">
+<!ATTLIST mrcb245 obsolete   CDATA  #FIXED "no">
+<!ATTLIST mrcb245 repeatable CDATA  #FIXED "no">
+<!ELEMENT mrcb245-a (#PCDATA)>
+<!ATTLIST mrcb245-a name       CDATA  #FIXED "Title">
+<!ATTLIST mrcb245-a obsolete   CDATA  #FIXED "no">
+<!ATTLIST mrcb245-a repeatable CDATA  #FIXED "no">
+<!ELEMENT mrcb246 (mrcb246-a*)>
+<!ATTLIST mrcb246 name       CDATA  #FIXED "VARYING FORM OF TITLE">
+<!ATTLIST mrcb246 obsolete   CDATA  #FIXED "no">
+<!ATTLIST mrcb246 repeatable CDATA  #FIXED "yes">
+<!ATTLIST mrcb246-a name       CDATA  #FIXED "Title proper/short title">
+<!ATTLIST mrcb246-a obsolete   CDATA  #FIXED "no">
+<!ATTLIST mrcb246-a repeatable CDATA  #FIXED "no">
+<!ELEMENT mrcb-edition-imprint-etc (mrcb250?, mrcb260?)>
+<!ELEMENT mrcb250 (mrcb250-a*)>
+<!ATTLIST mrcb250 name       CDATA  #FIXED "EDITION STATEMENT">
+<!ATTLIST mrcb250 obsolete   CDATA  #FIXED "no">
+<!ATTLIST mrcb250 repeatable CDATA  #FIXED "no">
+<!ATTLIST mrcb250 i1          (i1-blank )  "i1-blank">
+<!ATTLIST mrcb250 i2          (i2-blank )  "i2-blank">
+<!ELEMENT mrcb250-a (#PCDATA)>
+<!ATTLIST mrcb250-a name       CDATA  #FIXED "Edition statement">
+<!ATTLIST mrcb250-a obsolete   CDATA  #FIXED "no">
+<!ATTLIST mrcb250-a repeatable CDATA  #FIXED "no">
+<!ELEMENT mrcb260 (mrcb260-a*)>
+<!ATTLIST mrcb260 name       CDATA  #FIXED "PUBLICATION, DISTRIBUTION, ETC. (IMPRINT)">
+<!ATTLIST mrcb260 obsolete   CDATA  #FIXED "no">
+<!ATTLIST mrcb260 repeatable CDATA  #FIXED "no">
+<!ELEMENT mrcb260-a (#PCDATA)>
+<!ATTLIST mrcb260-a name       CDATA  #FIXED "Place of publication, distribution, etc.">
+<!ATTLIST mrcb260-a obsolete   CDATA  #FIXED "no">
+<!ATTLIST mrcb260-a repeatable CDATA  #FIXED "yes">
+<!ELEMENT mrcb-physical-description (mrcb300*)>
+<!ELEMENT mrcb300 (mrcb300-a*)> 
+<!ATTLIST mrcb300 name       CDATA  #FIXED "PHYSICAL DESCRIPTION">
+<!ATTLIST mrcb300 obsolete   CDATA  #FIXED "no">
+<!ATTLIST mrcb300 repeatable CDATA  #FIXED "yes">
+<!ATTLIST mrcb300 i1          (i1-blank )  "i1-blank">
+<!ATTLIST mrcb300 i2          (i2-blank )  "i2-blank">
+<!ELEMENT mrcb300-a (#PCDATA)>
+<!ATTLIST mrcb300-a name       CDATA  #FIXED "Extent">
+<!ATTLIST mrcb300-a obsolete   CDATA  #FIXED "no">
+<!ATTLIST mrcb300-a repeatable CDATA  #FIXED "yes">
+<!ELEMENT mrcb-notes (mrcb500*)>
+<!ELEMENT mrcb500 (mrcb500-a*)> 
+<!ATTLIST mrcb500 name       CDATA  #FIXED "GENERAL NOTE">
+<!ATTLIST mrcb500 obsolete   CDATA  #FIXED "no">
+<!ATTLIST mrcb500 repeatable CDATA  #FIXED "yes">
+<!ATTLIST mrcb500 i1          (i1-blank )  "i1-blank">
+<!ATTLIST mrcb500 i2          (i2-blank )  "i2-blank">
+<!ELEMENT mrcb500-a (#PCDATA)>
+<!ATTLIST mrcb500-a name       CDATA  #FIXED "General note">
+<!ATTLIST mrcb500-a obsolete   CDATA  #FIXED "no">
+<!ATTLIST mrcb500-a repeatable CDATA  #FIXED "no">
+<!ELEMENT mrcb-location (mrcb851*)>
+<!ELEMENT mrcb851 (mrcb851-a*)>
+<!ATTLIST mrcb851 name       CDATA  #FIXED "LOCATION">
+<!ATTLIST mrcb851 obsolete   CDATA  #FIXED "yes">
+<!ATTLIST mrcb851 repeatable CDATA  #FIXED "yes">
+<!ATTLIST mrcb851 i1          (i1-blank )  "i1-blank">
+<!ATTLIST mrcb851 i2          (i2-blank )  "i2-blank">
+<!ELEMENT mrcb851-a (#PCDATA)>
+<!ATTLIST mrcb851-a name       CDATA  #FIXED "Name (custodian or owner)">
+<!ATTLIST mrcb851-a obsolete   CDATA  #FIXED "yes">
+<!ATTLIST mrcb851-a repeatable CDATA  #FIXED "no">

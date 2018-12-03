@@ -1,0 +1,23 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                  <jsp:useBean id="curLibrarian" scope="session" class="digilib.web.Librarian"/>
+<%
+	if (curLibrarian.isValidated()) {
+%>				  
+                  <form name="LogoutForm" id="LogoutForm" method="post" action="/process/librarians.jsp?action=logout">
+                    <table width="310" border="0" cellspacing="5" cellpadding="0">
+                      <tr>
+                        <td align="right">Thủ thư <strong>
+                          <jsp:getProperty name="curLibrarian" property="Name" />
+                          </strong></td>
+                        <td width="75" align="center">
+                          <input name="Logout" type="submit" class="button" id="Logout" value="Thoát" />
+                        </td>
+                      </tr>
+                    </table>
+                  </form>
+<%
+	} else {
+		response.sendRedirect("/librarians/?src=" + request.getRequestURI());
+	}
+%>				  
+                                    

@@ -1,0 +1,5 @@
+<!ELEMENT properties (category)*>
+<!ELEMENT category (property)+>
+<!ATTLIST name TYPE CDATA  #REQUIRED>
+<!ELEMENT property (#PCDATA)>
+<!ATTLIST name TYPE CDATA  #REQUIRED>

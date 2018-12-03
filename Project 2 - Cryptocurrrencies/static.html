@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crytocurrency World</title>
+  
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="define.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css">
+
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Cryptocurrency Gateway</a>
+            </div>
+              <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Info<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li style="color: navy;"><a href="static.html">Our top 10 </a></li>
+                            <li><a href="index.html">Home</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="admin.html">Data Administration</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+<div class="bg">
+<div class="container-fluid"> 
+<br>
+<br>
+<div id="staticoin" style="color: white;">
+        <h1 style="text-align: center">Our 10 Cryptocurrencies </h1>
+        </div>
+<div class="row">
+<div class="col-md-12 box">
+<div id='plotly-div'></div>
+</div>
+
+</div>
+<div class="row">
+        
+                <div class="row">   
+    <div class="col-md-12 box">
+           <div id="time"></div>           
+    </div> 
+    </div>
+    <div class="row">
+    <div class="col-md-12 box">
+        <div id="lines"></div>
+    </div>
+    </div>
+</div>
+
+<div style="color:rgb(255, 179, 179);align-items: center">
+        <label><input type ='checkbox' id ="bch" value="bch" checked onclick ='plotclick();plotclick1();'>BITCOIN CASH (BCH)</label>
+        <label><input type ='checkbox' id ="btc" value="btc" checked onclick ='plotclick();plotclick1();'>BITCOIN (BTC) </label>
+        <label><input type ='checkbox' id ="dash" value="dash" checked onclick ='plotclick();plotclick1();'>DASH</label>
+        <label><input type ='checkbox' id ="etc" value="etc" checked onclick ='plotclick();plotclick1();'>Ethereum Classic (ETC)</label>
+        <label><input type ='checkbox' id ="eth" value="eth" checked onclick ='plotclick();plotclick1();'>Ethereum (ETH)</label>
+        <label><input type ='checkbox' id ="ltc" value="ltc" checked onclick ='plotclick();plotclick1();'>Litecoin (LTC)</label>
+        <label><input type ='checkbox' id ="neos" value="neos" checked onclick ='plotclick();plotclick1();'>NEOS</label>
+        <label><input type ='checkbox' id ="str" value="str" checked onclick ='plotclick();plotclick1();'>Stellar (STR)</label>
+        <label><input type ='checkbox' id ="xmr" value="xmr" checked onclick ='plotclick();plotclick1();'>Monero (XRM)</label>
+        <label><input type ='checkbox' id ="xrp" value="xrp" checked onclick ='plotclick();plotclick1();'>Ripple (XRP)</label>
+        <label><input type ='checkbox' id ="iot" value="iot" checked onclick ='plotclick();plotclick1();'>IOTA (IOT)</label>
+        </div>
+
+
+<div class="row">
+        <div class="col-md-12 box">
+<div id="bars"></div>
+</div>
+
+   
+    
+  </div>
+</div>
+</div>
+</body>
+<!-- D3 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+
+<!-- Leaflet JavaScript -->
+<script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- Our JavaScript -->
+
+<!--<script type="text/javascript" src="js/logic.js"></script>-->
+<!-- Our Javascript For Cluster-->
+<script type="text/javascript" src="static.js"></script>
+
+<script type="text/javascript" src="heatmap_plotly.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</html>

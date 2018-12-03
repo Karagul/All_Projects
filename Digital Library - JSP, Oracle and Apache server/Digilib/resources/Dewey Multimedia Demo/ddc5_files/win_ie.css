@@ -1,0 +1,90 @@
+.body {
+	FONT-FAMILY: Arial, Sans-Serif; FONT-SIZE: 9pt; LINE-HEIGHT: 13.5pt
+}
+.leaded {
+	LINE-HEIGHT: 13.5pt
+}
+.menuitem {
+	FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif; FONT-SIZE: 8pt
+}
+.quote {
+	FONT-FAMILY: Times, Serif; FONT-SIZE: 12pt; LINE-HEIGHT: 22pt; MARGIN-BOTTOM: 0pt; MARGIN-TOP: 6pt
+}
+.quotesig {
+	FONT-FAMILY: Times, Serif; FONT-SIZE: 10pt; FONT-STYLE: italic; LINE-HEIGHT: 22pt; MARGIN-BOTTOM: 6pt; MARGIN-TOP: 5pt
+}
+.size1 {
+	FONT-FAMILY: Verdana, Arial, Sans-Serif; FONT-SIZE: 7.5pt
+}
+.size2 {
+	FONT-FAMILY: Arial, Sans-Serif; FONT-SIZE: 9pt
+}
+.size3 {
+	FONT-FAMILY: Arial, Sans-Serif; FONT-SIZE: 10pt
+}
+A {
+	COLOR: #666699; TEXT-DECORATION: underline
+}
+A.crumb {
+	COLOR: #666699; TEXT-DECORATION: underline
+}
+BODY {
+	BACKGROUND-REPEAT: repeat-x
+}
+H1 {
+	COLOR: #666699; FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif; FONT-SIZE: 24pt; LINE-HEIGHT: normal
+}
+.size4 {
+	FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif; FONT-SIZE: 11pt; FONT-WEIGHT: normal; LINE-HEIGHT: 16pt
+}
+A.menuitem {
+	COLOR: #666699; TEXT-DECORATION: underline
+}
+H2 {
+	COLOR: #000000; FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif; FONT-SIZE: 18pt; FONT-WEIGHT: bold; LINE-HEIGHT: 24pt
+}
+.crumb {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 9pt
+}
+A:link {
+	COLOR: #666699
+}
+H3 {
+	COLOR: #666666; FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif; FONT-SIZE: 14pt; FONT-WEIGHT: bold; LINE-HEIGHT: 18pt
+}
+.horizmenu {
+	COLOR: #666666; FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif; FONT-SIZE: 8pt
+}
+.linespacetight {
+	LINE-HEIGHT: 10pt
+}
+A:hover {
+	COLOR: #cc3333
+}
+A:visited {
+	COLOR: #9999cc
+}
+A:active {
+	COLOR: #cc3333
+}
+A.crumb:visited {
+	COLOR: #666699; TEXT-DECORATION: underline
+}
+.intro {
+	BORDER-BOTTOM-COLOR: #999999; BORDER-LEFT-COLOR: black; BORDER-RIGHT-COLOR: black; BORDER-TOP-COLOR: #999999; COLOR: #666699; FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif; FONT-SIZE: 11pt; FONT-WEIGHT: normal; LINE-HEIGHT: 16pt
+}
+.homemenu {
+	FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif; FONT-SIZE: 8pt
+}
+A.homemenu {
+	COLOR: #333366; TEXT-DECORATION: underline
+}
+A.homemenu:visited {
+	COLOR: #333333; TEXT-DECORATION: underline
+}
+TD {
+	FONT-FAMILY: Arial, Sans-Serif; FONT-SIZE: 9pt
+}
+H4 {
+	COLOR: #666666; FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif; FONT-SIZE: 12pt; FONT-WEIGHT: bold; LINE-HEIGHT: 14pt
+}

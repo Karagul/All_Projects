@@ -1,0 +1,57 @@
+.navigator {
+	letter-spacing: 4px;
+	background-color: #FFFFCC;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #999999;
+
+
+}
+table {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+a {
+	color: #000099;
+	text-decoration: none;
+}
+.copyright {
+	color: #999999;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #999999;
+}
+.button {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #000066;
+	background-color: #FFFF99;
+	border: 1px solid #999999;
+	font-size: 11px;
+
+}
+.headline {
+	color: #FFFFFF;
+	letter-spacing: 1px;
+}
+.textbox {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	width: 100%;
+}
+.listbox {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+.picbutton {
+	cursor: hand;
+}
+.data {
+	line-height: 22px;
+}
+.textbox-rightalign {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	width: 100%;
+	text-align: right;
+
+}

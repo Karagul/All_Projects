@@ -1,0 +1,16 @@
+! ** JCreator Workspace File (C)2000
+! ********** DO NOT EDIT *********
+
+VERSION := "1.00"
+LABEL := "D I G I L I B"
+
+! Start Project Structure
+#[BeginProject]SOURCE := "src\\digilib\\web\\digilib.web.jcp" #[EndProject]
+#[BeginProject]SOURCE := "src\\digilib\\util\\digilib.util.jcp" #[EndProject]
+#[BeginProject]SOURCE := "src\\digilib\\view\\digilib.view.jcp" #[EndProject]
+
+! Start Last Document Structure
+#[BeginFile]SOURCE := "src\\digilib\\web\\Format.java" #[EndFile]
+
+! Start Breakpoint Structure
+

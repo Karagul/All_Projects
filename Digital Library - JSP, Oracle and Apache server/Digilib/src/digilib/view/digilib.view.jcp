@@ -1,0 +1,54 @@
+! ** JCreator Project File (C)2000
+! ********** DO NOT EDIT *********
+
+VERSION := "1.10"
+LABEL := "digilib.view"
+JDKPROFILE := "JDK version 1.3"
+ACTIVE := "0"
+OUTPUTPATH := "G:\\D I G I L I B\\www\\WEB-INF\\classes"
+COMPILER := "<Default>"
+
+! Start RunTime Configuration Structure
+#[BeginRunTime]LABEL := "<Default>" RUNAPPLIC := "" RUNAPPLET := "" PARAM := "" RUN := "digilib.view.Search" CHECK := "10" #[EndRunTime]
+! Start Required Libraries Structure
+#[BeginRLibrary]LABEL := "Oracle JDBC" #[EndRLibrary]
+
+! Start Project Folder Structure
+#[BeginFolder]
+LABEL := "Root"
+FILTER := ""
+
+#[BeginFile]SOURCE := "Keyword.java" #[EndFile]
+#[BeginFile]SOURCE := "Name.java" #[EndFile]
+#[BeginFile]SOURCE := "Note.java" #[EndFile]
+#[BeginFile]SOURCE := "OtherTitle.java" #[EndFile]
+#[BeginFile]SOURCE := "Search.java" #[EndFile]
+#[BeginFile]SOURCE := "Language.java" #[EndFile]
+#[BeginFile]SOURCE := "Format.java" #[EndFile]
+#[BeginFile]SOURCE := "DayEnd.java" #[EndFile]
+#[BeginFile]SOURCE := "LoanOverdueList.java" #[EndFile]
+#[BeginFile]SOURCE := "BookingOverdueList.java" #[EndFile]
+#[BeginFile]SOURCE := "ExpansionList.java" #[EndFile]
+#[BeginFile]SOURCE := "LoanList.java" #[EndFile]
+#[BeginFile]SOURCE := "BookingList.java" #[EndFile]
+#[BeginFile]SOURCE := "Transaction.java" #[EndFile]
+#[BeginFile]SOURCE := "Copy.java" #[EndFile]
+#[BeginFile]SOURCE := "Item.java" #[EndFile]
+#[BeginFile]SOURCE := "Librarian.java" #[EndFile]
+#[BeginFile]SOURCE := "Member.java" #[EndFile]
+#[BeginFile]SOURCE := "MemberGroup.java" #[EndFile]
+#[BeginFile]SOURCE := "Registration.java" #[EndFile]
+#[BeginFile]SOURCE := "View.java" #[EndFile]
+#[BeginFile]SOURCE := "Booking.java" #[EndFile]
+#[BeginFile]SOURCE := "Loan.java" #[EndFile]
+#[BeginFile]SOURCE := "Expansion.java" #[EndFile]
+#[BeginFile]SOURCE := "Return.java" #[EndFile]
+#[BeginFile]SOURCE := "BookingDetail.java" #[EndFile]
+#[BeginFile]SOURCE := "LoanDetail.java" #[EndFile]
+#[BeginFile]SOURCE := "ExpansionDetail.java" #[EndFile]
+#[BeginFile]SOURCE := "ReturnDetail.java" #[EndFile]
+#[BeginFile]SOURCE := "WaitingList.java" #[EndFile]
+#[BeginFile]SOURCE := "WaitingOverdueList.java" #[EndFile]
+#[BeginFile]SOURCE := "TransactionOverdue.java" #[EndFile]
+#[BeginFile]SOURCE := "Classification.java" #[EndFile]
+#[EndFolder]

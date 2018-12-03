@@ -1,0 +1,25 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                  <jsp:useBean id="curMember" scope="session" class="digilib.web.Member"/>
+                  <MM:BeginLock translatorClass="MM_JSPSCRIPT" type="script" depFiles="" orig="%3C%25
+	if (curMember.isValidated()) {
+%25%3E" ><mm_jspscript><MM:EndLock>
+                  				  
+                  <form name="LogoutForm" id="LogoutForm" method="post" action="/process/members.jsp?action=logout">
+                    <table width="310" border="0" cellspacing="5" cellpadding="0">
+                      <tr>
+                        <td align="right">Độc giả <strong>
+                          <MM:BeginLock translatorClass="MM_JSPSCRIPT" type="jsp_getProperty" depFiles="" orig="%3Cjsp:getProperty name=%22curMember%22 property=%22Name%22 /%3E" ><mm_dynamic_content source="curMember" binding="Name" dynamicdata=1><MM:DECORATION HILITECOLOR="Dyn Untranslated Color">{curMember.Name}</MM:DECORATION></mm_dynamic_content><MM:EndLock>
+                          </strong></td>
+                        <td width="75" align="center">
+                          <input name="Logout" type="submit" class="button" id="Logout" value="Thoát" />
+                        </td>
+                      </tr>
+                    </table>
+                  </form>
+                  <MM:BeginLock translatorClass="MM_JSPSCRIPT" type="script" depFiles="" orig="%3C%25
+	} else {
+		response.sendRedirect(%22/members/?src=%22 + request.getRequestURI());
+	}
+%25%3E" ><mm_jspscript><MM:EndLock>
+                  				  
+                                    

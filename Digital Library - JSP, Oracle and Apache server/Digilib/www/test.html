@@ -1,0 +1,71 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml">
+<style>
+v\:* {behavior:url(#default#VML);}
+</style>
+<script language="JavaScript">
+var daStr;
+
+function setDrawArea(left, top, width, height) {
+	daStr	= 'position:absolute; left:' + left + '; top:' + top + '; '
+		+ 'width:' + width + '; height:' + height + ';';
+}
+
+var ox = 500;
+var oy = 500;
+var rad = 500;
+
+function Arc(start, end) {
+var torad = Math.PI/180
+var ssin = Math.round(rad*Math.sin(start*torad));
+var scos = Math.round(rad*Math.cos(start*torad));
+var esin = Math.round(rad*Math.sin(end*torad));
+var ecos = Math.round(rad*Math.cos(end*torad));
+var arStr;
+	arStr 	= 'm'+ox+','+oy
+		+ 'ar0,0,'+(ox+ox)+','+(oy+oy)+','+(ox+scos)+','+(oy-ssin)+','+(ox+ecos)+','+(oy-esin)
+		+ 'l'+ox+','+oy+'xe';
+	return arStr;
+}
+
+function Rectangle(x, y, width, height) {
+var reStr;
+	reStr	= 'm'+x+','+y
+		+ 'l'+(x+width)+','+y
+		+ 'l'+(x+width)+','+(y+height)
+		+ 'l'+x+','+(y+height)
+		+ 'l'+x+','+y
+	return reStr;
+}
+
+function draw(frcolor, bgcolor, drFunc) {
+var drStr;
+	drStr	= '<v:shape coordsize="1000, 1000" fillcolor="' + bgcolor + '"'
+		+ 'strokecolor="' + frcolor + '"'
+		+ 'path="' + drFunc + '"'
+		+ 'style="' + daStr + '" />';
+return drStr;
+}
+</script>
+<body>
+<div align="center">
+<!--
+<v:shape fillcolor="red" coordsize="1000,1000"
+	strokecolor="blue"
+	path="m500,500ar0,0,1000,1000,500,0,-1000,-500l500,500xe"
+	style="position: absolute; left:200px; top:160px; width:200px; height:150px">
+</v:shape>
+<v:shape fillcolor="yellow" coordsize="1000,1000"
+	strokecolor="blue"
+	path="m500,500ar0,0,1000,1000,-1000,-500,0,500l500,500xe"
+	style="position: absolute; left:200px; top:160px; width:200px; height:150px">
+</v:shape>
+-->
+<script>
+	setDrawArea(100, 100, 100, 100);
+	document.write(draw("black","#ffff99", Arc(0,44)));
+	document.write(draw("black","#cc0000", Arc(45,179)));
+	document.write(draw("black","blue", Arc(180, 359)));
+</script>
+</div>
+</body>
+</html>

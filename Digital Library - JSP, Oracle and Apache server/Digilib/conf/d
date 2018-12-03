@@ -1,0 +1,12 @@
+<VirtualHost www.digilib.com>
+    ServerAdmin webmaster@digilib.com
+    DocumentRoot "D:\Digilib\www"
+    ServerName www.digilib.com
+#    <location "/">
+#      Allow from all
+#      Option follow Symlink
+#    </location>
+    DirectoryIndex index.jsp
+    ErrorLog "d:\Digilib\logs\www.digilib.com-error_log"
+    CustomLog "d:\Digilib\logs\www.digilib.com-access_log" common
+</VirtualHost>

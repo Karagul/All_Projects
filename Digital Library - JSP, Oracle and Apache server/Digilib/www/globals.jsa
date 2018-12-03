@@ -1,0 +1,38 @@
+<%@page import="java.util.*"%>
+<%@page import="digilib.util.DBConnectionManager"%>
+<%@page import="digilib.util.Properties"%>
+<event:application_OnStart>
+<%
+  Properties pr = new Properties(application.getRealPath("/conf/conf.xml"));
+  Hashtable dbdriver = pr.getCategory("db-driver");
+  Hashtable dbconnection = pr.getCategory("db-connection");
+  DBConnectionManager.setParameters((String)dbdriver.get("driver"),
+                                    (String)dbconnection.get("uri"),
+                                    (String)dbconnection.get("username"),
+                                    (String)dbconnection.get("password"),
+                                    4,
+                                    10,
+                                    false);
+%>
+</event:application_OnStart>
+<event:application_OnEnd>
+<%
+/*
+  DBConnectionManager.getInstance().closeAllConnections();
+*/
+  System.gc();
+  System.runFinalization();
+%>
+</event:application_OnEnd>
+<event:session_OnStart>
+<%
+/*
+  System.gc();
+*/
+%>
+</event:session_OnStart>
+<event:session_OnEnd>
+<%
+  System.gc();
+%>
+</event:session_OnEnd>
